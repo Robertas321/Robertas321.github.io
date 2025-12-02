@@ -1,0 +1,658 @@
+/* General font for the whole page */
+body {
+  font-family: 'Lato', Helvetica, sans-serif;
+  color: #333;
+}
+
+.about{
+  font-family: 'Lato', Helvetica, sans-serif !important;
+}
+
+/* Headings */
+h1{font-size:2.5rem;color:#355b8b;font-weight:700;letter-spacing:1px;line-height:1.2;}
+h2{font-size:2rem;color:#81108b;font-weight:600;letter-spacing:0.5px;line-height:1.3;}
+h3{font-size:1.75rem;color:#2f9194;font-weight:600;}
+h4{font-size:1.5rem;color:#1a6d13;font-weight:500;letter-spacing:0.5px;}
+h5{font-size:1.25rem;color:#8a093e;font-weight:500;letter-spacing:0.4px;}
+h6{font-size:1rem;color:#b9c54a;font-weight:400;letter-spacing:0.3px;}
+
+
+/* Paragraphs */
+p { font-size: 1rem; line-height: 1.6; color: #473838; font-family: 'Pacifico', cursive !important;}
+
+.resume{
+  font-family: 'Lato', Helvetica, sans-serif !important;
+}
+
+/* Button */
+/* Standard buttons */
+.btn {
+  background-color: #ff5722;   /* bright orange */
+  color: #fff;
+  border-radius: 12px;
+  padding: 0.6rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.btn:hover {
+  background-color: #e64a19;   /* darker orange */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Active (pressed) effect */
+.btn:active {
+  background-color: #065081 !important;
+  transform: translateY(0px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Ghost buttons */
+.btn-ghost {
+  background-color: #28acb1 !important;
+  color: #ff5722;
+  border: 2px solid #ff5722;
+}
+
+.btn-ghost:hover {
+  background-color: #ff5722;
+  color: #fff;
+}
+
+/* Standard links */
+a {
+  color: #17e495 !important;       /* teal */
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+a:hover {
+  color: #041a17 !important;       /* darker teal */
+  text-decoration: wavy;
+}
+
+/* Example for links inside hero */
+#hero a {
+  font-weight: 600;
+}
+
+.section {
+  background-color: #ffffff;               /* white background */
+  border: 2px solid #e0e0e0;              /* subtle border */
+  border-radius: 15px;                     /* rounded corners */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15); /* soft shadow */
+  padding: 60px 30px;                      /* consistent internal spacing */
+  margin-bottom: 50px;                     /* space between sections */
+  transition: all 0.3s ease;               /* smooth hover transition */
+}
+
+/* Optional hover effect for extra prominence */
+.section:hover {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25); 
+  transform: translateY(-3px);
+}
+
+#about, #resume, #portfolio {
+  padding: 40px 15px !important;
+  margin-bottom: 20px !important;
+}
+
+/* Service items styling */
+.service-item {
+  padding: 10px;           /* smaller padding inside each block */
+  margin-bottom: 15px;     /* less vertical gap */
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  background-color: #f9f9f9;             /* light background for contrast */
+  border: 2px solid #ddd;                /* subtle border */
+  border-radius: 15px;                    /* rounded corners */
+  padding: 20px;                          /* inner spacing */                    /* space between items */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);/* subtle shadow for depth */
+  transition: all 0.3s ease;              /* smooth hover effect */
+}
+
+/* Headings inside service items */
+.service-item h3 {
+  color: #ff5722;                         /* standout heading color */
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Hover effect for service items */
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* Video, audio, iframe responsiveness */
+.service-item video,
+.service-item audio,
+.service-item iframe {
+  width: 100%;             /* full width of container */
+  border-radius: 10px;     /* rounded media */
+  display: block;
+  margin: 0 auto;
+}
+
+.services-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.services-table th, .services-table td {
+  padding: 12px 15px;       /* uniform cell padding */
+  border: 1px solid #ddd;
+}
+
+.services-table thead {
+  background-color: #009688;
+  color: #fff;
+  font-weight: bold;
+}
+
+.services-table tbody tr:nth-child(even) {
+  background-color: #f3f3f3;  /* zebra stripes */
+}
+
+.services-table tbody tr:hover {
+  background-color: #ffe0b2;  /* hover effect */
+}
+
+/* Initialize counter for education entries */
+.education-list {
+  counter-reset: edu-counter;
+}
+
+/* Increment counter for each entry */
+.education-entry {
+  counter-increment: edu-counter;
+  position: relative;
+  padding-left: 40px;  /* space for the number */
+  margin-bottom: 20px;
+}
+
+/* Display the number before each entry */
+.education-entry::before {
+  content: counter(edu-counter) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c7dac;       /* standout number color */
+}
+
+/* Unordered list */
+.custom-ul, .custom-ul ul {
+  list-style: none;      /* remove default bullets */
+  padding-left: 20px;    /* indentation */
+}
+
+.custom-ul li::before {
+  content: "•";          /* custom bullet */
+  color: #459245;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;     /* aligns bullet to the left */
+}
+
+/* Ordered list with counters */
+.custom-ol {
+  counter-reset: ol-counter;
+  list-style: none;
+  padding-left: 30px;
+}
+
+.custom-ol li {
+  counter-increment: ol-counter;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.custom-ol li::before {
+  content: counter(ol-counter) ".";
+  position: absolute;
+  left: -30px;
+  color: #009688;
+  font-weight: bold;
+}
+
+/* 10 ld*/
+/* ============================================================
+   ✅ 1) ANIMACIJA: Sekcijų Fade-In
+=============================================================== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Taikome tavo esamoms sekcijoms */
+.section {
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+
+/* ============================================================
+   ✅ 2) ANIMACIJA: Socialinių ikonų „bounce“
+=============================================================== */
+
+@keyframes iconBounce {
+  0%{ transform: translateY(0); }
+  50%{ transform: translateY(-6px); }
+  100%{ transform: translateY(0); }
+}
+
+.social-links a:hover {
+  animation: iconBounce 0.6s infinite;
+}
+
+
+/* ============================================================
+   ✅ 3) PAGE PRELOADER (tik CSS)
+=============================================================== */
+
+#preloader {
+  position: fixed;
+  inset: 0;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#preloader div {
+  width: 14px;
+  height: 14px;
+  background: #ff5722;
+  border-radius: 50%;
+  margin: 0 6px;
+  animation: pulse 1.5s infinite ease-in-out both;
+}
+
+#preloader div:nth-child(1) { animation-delay: 0s; }
+#preloader div:nth-child(2) { animation-delay: 0.15s; }
+#preloader div:nth-child(3) { animation-delay: 0.3s; }
+#preloader div:nth-child(4) { animation-delay: 0.45s; }
+
+@keyframes pulse {
+  0%   { transform: scale(0.3); opacity: 0.3; }
+  50%  { transform: scale(1);   opacity: 1; }
+  100% { transform: scale(0.3); opacity: 0.3; }
+}
+
+/* Automatinis loader paslėpimas */
+#preloader {
+  animation: hidePreloader 2.2s forwards;
+}
+
+@keyframes hidePreloader {
+  0%   { opacity: 1; visibility: visible; }
+  90%  { opacity: 1; }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
+/* ============================================================
+   ✅ 4) PALAUKFUNKCIJA VARTOTOJAMS SU JUDESIO JAUTRUMU
+=============================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+}
+
+/* ============================================================
+   ================= PAPILDOMA UŽDUOTIS ======================
+   ============================================================ */
+
+/* ============================================================
+   ✅ 1. Animated gradient background – SERVICES section
+=============================================================== */
+
+#services {
+  background: linear-gradient(
+    270deg,
+    #ff5f6d,
+    #ffc371,
+    #1fa2ff,
+    #12d8fa,
+    #a6ffcb
+  );
+  background-size: 800% 800%;
+
+  animation: movingGradient 12s ease infinite;
+
+  border-radius: 20px;
+}
+
+/* Gradient movement */
+@keyframes movingGradient {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* ============================================================
+   ✅ 2. CSS figure animation – ABOUT section
+=============================================================== */
+
+/* Parent for positioning */
+#about {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Universal styling for shapes */
+.about-shape {
+  position: absolute;
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+/* ================= TRIANGLE ================= */
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 45px solid transparent;
+  border-right: 45px solid transparent;
+  border-bottom: 80px solid #ff5722;
+
+  top: 10%;
+  left: 8%;
+
+  animation: rotateShape 12s linear infinite;
+}
+
+/* ================= CIRCLE ================= */
+
+.circle {
+  width: 80px;
+  height: 80px;
+  background: #009688;
+  border-radius: 50%;
+
+  top: 15%;      /* top-right corner */
+  right: 15%;
+
+  animation: circleOrbit 7s linear infinite;
+}
+
+
+
+/* ================= SQUARE ================= */
+
+.square {
+  width: 65px;
+  height: 65px;
+  background: #1fa2ff;
+
+  bottom: 10%;
+  right: 10%;   /* <<< move to right side */
+
+  animation: scaleShape 10s ease-in-out infinite;
+}
+
+
+
+/* ============================================================
+   ✅ FIGURE ANIMATIONS
+=============================================================== */
+
+/* Rotating */
+@keyframes rotateShape {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Floating */
+@keyframes floatShape {
+  0%,100% { transform: translateY(0); }
+  50%     { transform: translateY(-30px); }
+}
+
+/* Scaling */
+@keyframes scaleShape {
+  0%,100% { transform: scale(1); }
+  50%     { transform: scale(1.4); }
+}
+
+@keyframes circleOrbit {
+  0%   { transform: rotate(0deg) translateX(25px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(25px) rotate(-360deg); }
+}
+
+
+/* ============================================================
+   ✅ SUPPORT – PREFERS REDUCED MOTION
+=============================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  #services,
+  .about-shape {
+    animation: none !important;
+  }
+
+}
+
+/* 10 lab*/
+
+/* =======================================================
+   POPUP MESSAGE STYLING – custom.js 
+=======================================================*/
+
+.custom-popup {
+  position: fixed;
+  top: 20px;
+  right: -400px;
+  background: #009688;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  transition: all 0.5s ease;
+  z-index: 99999;
+}
+
+.custom-popup.show {
+  right: 20px;
+}
+
+/* ============================================================
+   CONTACT FORM – CUSTOM STYLING
+=============================================================== */
+
+.contact-form {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  border: 2px solid #e0e0e0;
+}
+
+/* INPUTS */
+
+.contact-form .form-input,
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"] {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 12px;
+  border: 2px solid #ddd;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.25s ease;
+  background: #fafafa;
+}
+
+.contact-form .form-input:focus {
+  border-color: #009688;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(0,150,136,0.15);
+}
+
+/* SPACING */
+
+.contact-form .row {
+  margin-bottom: 14px;
+}
+
+/* ADDRESS FIELD (FULL WIDTH) */
+
+.contact-form #address {
+  margin-top: 10px;
+}
+
+/* SLIDER SECTION */
+
+.contact-form label {
+  font-family: 'Lato', Helvetica, sans-serif;
+  color: #126f80;
+  font-weight: 600;
+  display: block;
+  margin: 10px 0 4px;
+}
+
+.contact-form input[type="range"] {
+  width: 100%;
+  accent-color: #009688;
+  margin-bottom: 10px;
+}
+
+/* SLIDER VALUE TRACK STYLE */
+
+.contact-form input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px;
+  background: linear-gradient(90deg, #009688, #4db6ac);
+  border-radius: 99px;
+}
+
+.contact-form input[type="range"]::-webkit-slider-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid #009688;
+  margin-top: -6px;
+}
+
+/* SUBMIT BUTTON */
+
+.contact-form .send-button {
+  width: 100%;
+  border-radius: 16px;
+  background: linear-gradient(120deg, #009688, #4db6ac);
+  border: none;
+  color: #ffffff;
+  font-size: 1.1rem;
+  padding: 14px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.contact-form .send-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0,150,136,0.35);
+}
+
+.contact-form .send-button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 15px rgba(0,150,136,0.25);
+}
+
+/* RESULTS BOX */
+
+#form-result {
+  background: #e0f2f1;
+  border-left: 6px solid #009688;
+  padding: 15px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+/* TEXT LOOK */
+
+#form-result p {
+  margin: 4px 0;
+  font-family: Arial, sans-serif !important;
+  color: #333;
+}
+
+/* POPUP STYLE ADDITIONS */
+
+.custom-popup {
+  border-left: 6px solid #ffffff70;
+}
+
+/* MOBILE OPTIMIZATION */
+
+@media (max-width: 768px) {
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  .contact-form .send-button {
+    padding: 12px;
+  }
+}
+
+/* Papildoma uzd*/
+/* ====================================================
+   REAL TIME VALIDATION STYLES
+==================================================== */
+
+.form-input.invalid {
+  border-color: #ff3b3b !important;
+  background: #fff0f0;
+}
+
+.error-text {
+  font-size: 0.85rem;
+  color: #ff3b3b;
+  margin-top: 4px;
+}
+
+/* Disabled submit button */
+
+.send-button:disabled {
+  background: linear-gradient(120deg,#aaa,#ccc) !important;
+  box-shadow: none !important;
+  cursor: not-allowed;
+  transform: none !important;
+  opacity: 0.75;
+}
+
+
+
+
+
+
+
+
+
+
